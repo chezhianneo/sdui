@@ -1,0 +1,54 @@
+{
+  "id": "login",
+  "title": "Sign in",
+  "root": {
+    "type": "vstack",
+    "spacing": 18,
+    "horizontalAlignment": "center",
+    "fillWidth": true,
+    "padding": { "horizontal": 24, "top": 48, "bottom": 24 },
+    "children": [
+      { "type": "logo", "text": "S", "background": "#0A84FF", "foreground": "white", "size": 76 },
+      { "type": "spacer", "minLength": 4 },
+      { "type": "text", "text": "Welcome back", "style": "title", "weight": "bold", "alignment": "center" },
+      { "type": "text", "text": "Enter your phone number to continue", "style": "subheadline", "color": "secondaryLabel", "alignment": "center" },
+      { "type": "spacer", "minLength": 8 },
+      {
+        "type": "textField",
+        "fieldId": "phone",
+        "placeholder": "Phone number",
+        "keyboardType": "phonePad",
+        "leading": { "type": "image", "systemName": "phone.fill", "size": 16, "color": "secondaryLabel" }
+      },
+      {
+        "type": "button",
+        "title": "Continue",
+        "style": "primary",
+        "action": { "type": "submit", "target": "otp", "validateFields": ["phone"] }
+      },
+      { "type": "divider", "label": "or continue with" },
+      {
+        "type": "button",
+        "title": "Continue with Google",
+        "style": "secondary",
+        "leadingIcon": "globe",
+        "action": { "type": "log", "target": "social:google" }
+      },
+      {
+        "type": "button",
+        "title": "Continue with Facebook",
+        "style": "secondary",
+        "leadingIcon": "f.cursive.circle.fill",
+        "action": { "type": "log", "target": "social:facebook" }
+      },
+      { "type": "spacer", "minLength": 12 },
+      {
+        "type": "text",
+        "text": "By continuing you agree to our Terms of Service and Privacy Policy.",
+        "style": "caption",
+        "color": "secondaryLabel",
+        "alignment": "center"
+      }
+    ]
+  }
+}

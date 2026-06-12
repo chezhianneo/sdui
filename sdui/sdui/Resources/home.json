@@ -1,0 +1,25 @@
+{
+  "id": "home",
+  "title": "Welcome",
+  "root": {
+    "type": "vstack",
+    "spacing": 14,
+    "horizontalAlignment": "center",
+    "fillWidth": true,
+    "padding": { "horizontal": 24, "top": 64, "bottom": 24 },
+    "children": [
+      { "type": "spacer", "minLength": 40 },
+      { "type": "image", "systemName": "checkmark.circle.fill", "size": 72, "color": "#34C759" },
+      { "type": "text", "text": "You’re signed in", "style": "title", "weight": "bold", "alignment": "center" },
+      {
+        "type": "text",
+        "text": "Signed in as {phone}",
+        "style": "subheadline",
+        "color": "secondaryLabel",
+        "alignment": "center",
+        "interpolatesFields": true
+      },
+      { "type": "spacer", "minLength": 40 }
+    ]
+  }
+}

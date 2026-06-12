@@ -1,0 +1,63 @@
+{
+  "id": "otp",
+  "title": "Verify",
+  "root": {
+    "type": "vstack",
+    "spacing": 18,
+    "horizontalAlignment": "center",
+    "fillWidth": true,
+    "padding": { "horizontal": 24, "top": 48, "bottom": 24 },
+    "children": [
+      { "type": "image", "systemName": "lock.shield.fill", "size": 52, "color": "tint" },
+      { "type": "spacer", "minLength": 4 },
+      { "type": "text", "text": "Enter the code", "style": "title", "weight": "bold", "alignment": "center" },
+      {
+        "type": "text",
+        "text": "We sent a 6-digit code to {phone}",
+        "style": "subheadline",
+        "color": "secondaryLabel",
+        "alignment": "center",
+        "interpolatesFields": true
+      },
+      { "type": "spacer", "minLength": 8 },
+      {
+        "type": "textField",
+        "fieldId": "otp",
+        "placeholder": "6-digit code",
+        "keyboardType": "numberPad",
+        "leading": { "type": "image", "systemName": "number", "size": 16, "color": "secondaryLabel" }
+      },
+      {
+        "type": "button",
+        "title": "Verify",
+        "style": "primary",
+        "action": {
+          "type": "verifyOTP",
+          "target": "home",
+          "params": { "fieldId": "otp", "expected": "123456" }
+        }
+      },
+      {
+        "type": "button",
+        "title": "Resend code",
+        "style": "link",
+        "action": { "type": "log", "target": "resend" }
+      },
+      { "type": "divider", "label": "or" },
+      {
+        "type": "button",
+        "title": "Sign in with Apple",
+        "style": "secondary",
+        "leadingIcon": "apple.logo",
+        "action": { "type": "appleSignIn", "target": "home" }
+      },
+      { "type": "spacer", "minLength": 8 },
+      {
+        "type": "button",
+        "title": "Use a different number",
+        "style": "link",
+        "action": { "type": "back" }
+      }
+    ]
+  }
+}
