@@ -124,3 +124,7 @@ Unknown tokens resolve to `.clear` — they never crash.
   verification would call a backend.
 - Social login buttons (Google / Facebook) currently fire `log` actions — they render
   and are tappable but aren't yet wired to provider SDKs.
+
+## License
+
+[MIT](LICENSE) © 2026 Elan
